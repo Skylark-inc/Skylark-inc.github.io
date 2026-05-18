@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(80, 160, 255, 0.35), transparent 35%),
+    linear-gradient(180deg, #07111f, #02050a);
+  color: #ffffff;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 28px;
+  text-align: center;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.logo {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #9dccff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 9vw, 3.3rem);
+  line-height: 1;
+}
+
+.description {
+  margin: 18px auto 26px;
+  max-width: 380px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.toc {
+  margin-top: 18px;
+}
+
+.toc h2 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+
+.toc-button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 15px 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #07111f;
+  background: #ffffff;
+  font-weight: 800;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.toc-button:hover {
+  transform: translateY(-2px);
+}
+
+.toc-button:active {
+  transform: scale(0.98);
+  opacity: 0.85;
+}
+
+footer {
+  margin-top: 26px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+footer a {
+  color: #9dccff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 420px) {
+  .page {
+    padding: 18px;
+  }
+
+  .card {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
