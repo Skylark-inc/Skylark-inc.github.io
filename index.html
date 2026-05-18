@@ -1,68 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Test Button</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  }
+  <title>Skylark Inc</title>
 
-  .card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(20px);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    color: white;
-  }
-
-  button {
-    margin-top: 15px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    cursor: pointer;
-    background: white;
-    color: #1e3c72;
-    transition: 0.2s;
-  }
-
-  button:hover {
-    transform: scale(1.05);
-  }
-</style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Web-icon.JPEG" />
+  <link rel="apple-touch-icon" href="Web-icon.JPEG" />
 </head>
-
 <body>
-  <div class="card">
-    <h2 id="text">Press the button</h2>
-    <button onclick="changeText()">Click me</button>
-  </div>
+  <main class="page">
+    <section class="card">
+      <img src="Web-icon.JPEG" alt="Skylark icon" class="logo" />
 
-<script>
-function changeText() {
-  const text = document.getElementById("text");
+      <p class="eyebrow">Skylark Inc</p>
 
-  const messages = [
-    "It works 😈",
-    "GitHub didn’t break it",
-    "Your CSS is alive",
-    "You clicked it again huh",
-    "Alright stop clicking now 😂"
-  ];
+      <h1>Welcome to Skylark</h1>
 
-  text.innerText = messages[Math.floor(Math.random() * messages.length)];
-}
-</script>
+      <p class="description">
+        Skylark is an iPhone wallpaper manager Siri Shortcut made to help manage,
+        update, and use Skylark wallpapers more easily.
+      </p>
+
+      <section class="toc">
+        <h2>Table of Contents</h2>
+
+        <a class="toc-button" href="servers.html">
+          Join Skylark Servers
+        </a>
+
+        <a class="toc-button" href="upgrade.html">
+          Upgrade your Skylark Edition
+        </a>
+      </section>
+
+      <footer>
+        <p>
+          Follow Skylark on
+          <a href="https://x.com/UseSkylark" target="_blank" rel="noopener noreferrer">
+            @UseSkylark
+          </a>
+        </p>
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
