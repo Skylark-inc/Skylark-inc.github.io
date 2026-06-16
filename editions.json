@@ -1,45 +1,45 @@
 [
-{
-“edition”: “Edition 1”,
-“min”: 14.3,
-“max”: 14.8,
-“link”: “https://www.icloud.com/shortcuts/0e72496714944ee296007b436b4d3a8f”
-},
-{
-“edition”: “Edition 2”,
-“min”: 15.0,
-“max”: 15.8,
-“link”: “https://www.icloud.com/shortcuts/65a674774ee5475cba87bb8ad822b08a”
-},
-{
-“edition”: “Edition 3”,
-“min”: 16.0,
-“max”: 16.7,
-“link”: “https://www.icloud.com/shortcuts/9c5bd486f48d4448b47bf423616ce882”
-},
-{
-“edition”: “Edition 4”,
-“min”: 17.0,
-“max”: 17.7,
-“link”: “https://www.icloud.com/shortcuts/8753eef694b54d13b29821ee68343e32”
-},
-{
-“edition”: “Edition 5”,
-“min”: 18.0,
-“max”: 18.7,
-“link”: “https://www.icloud.com/shortcuts/1f61f828cbf14f739117c164a4b5584a”
-},
-{
-“edition”: “Edition 6”,
-“min”: 26.0,
-“max”: “26.5.1”,
-“link”: “https://www.icloud.com/shortcuts/5008a65f01ea4f6fbe9397377b8e2b52”
-},
-{
-“edition”: “Edition 7”,
-“min”: 27.0,
-“max”: “27.9”,
-“beta”: true,
-“link”: “https://www.icloud.com/shortcuts/f9c0268dc928486c834bf40a05da6021”
-}
+  {
+    "edition": "Edition 1",
+    "min": "14.3",
+    "max": "14.8",
+    "link": "https://www.icloud.com/shortcuts/0e72496714944ee296007b436b4d3a8f"
+  },
+  {
+    "edition": "Edition 2",
+    "min": "15.0",
+    "max": "15.8",
+    "link": "https://www.icloud.com/shortcuts/65a674774ee5475cba87bb8ad822b08a"
+  },
+  {
+    "edition": "Edition 3",
+    "min": "16.0",
+    "max": "16.7",
+    "link": "https://www.icloud.com/shortcuts/9c5bd486f48d4448b47bf423616ce882"
+  },
+  {
+    "edition": "Edition 4",
+    "min": "17.0",
+    "max": "17.7",
+    "link": "https://www.icloud.com/shortcuts/8753eef694b54d13b29821ee68343e32"
+  },
+  {
+    "edition": "Edition 5",
+    "min": "18.0",
+    "max": "18.7",
+    "link": "https://www.icloud.com/shortcuts/1f61f828cbf14f739117c164a4b5584a"
+  },
+  {
+    "edition": "Edition 6",
+    "min": "26.0",
+    "max": "26.5.1",
+    "link": "https://www.icloud.com/shortcuts/5008a65f01ea4f6fbe9397377b8e2b52"
+  },
+  {
+    "edition": "Edition 7",
+    "min": "27.0",
+    "max": "27.9",
+    "beta": true,
+    "link": "https://www.icloud.com/shortcuts/f9c0268dc928486c834bf40a05da6021"
+  }
 ]
