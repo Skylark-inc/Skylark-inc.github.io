@@ -11,8 +11,8 @@ body {
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top, rgba(80, 160, 255, 0.35), transparent 35%),
-    linear-gradient(180deg, #07111f, #02050a);
+    radial-gradient(circle at top, rgba(255, 198, 41, 0.22), transparent 32%),
+    linear-gradient(180deg, #0e1a2a, #02050a);
   color: #ffffff;
 }
 
@@ -29,96 +29,138 @@ body {
   max-width: 520px;
   padding: 28px;
   text-align: center;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
 .logo {
-  width: 82px;
-  height: 82px;
+  width: 92px;
+  height: 92px;
   object-fit: cover;
-  border-radius: 22px;
-  margin-bottom: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  border-radius: 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.36);
 }
 
 .eyebrow {
-  margin: 0 0 8px;
-  color: #9dccff;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  margin: 0 0 10px;
+  color: #ffd65a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2.1rem, 9vw, 3.3rem);
-  line-height: 1;
+  font-size: clamp(2.25rem, 9vw, 3.45rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
 }
 
 .description {
-  margin: 18px auto 28px;
+  margin: 18px auto 24px;
   max-width: 410px;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.02rem;
   line-height: 1.55;
 }
 
+.device-warning {
+  margin: 20px 0 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 214, 80, 0.14);
+  border: 1px solid rgba(255, 214, 80, 0.35);
+  color: #ffe9a3;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.device-warning strong {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
 .link-section {
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .link-section h2 {
   margin: 0 0 14px;
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
 }
 
 .link-button {
   display: block;
   width: 100%;
   margin: 12px 0;
-  padding: 15px 18px;
-  border-radius: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  text-align: left;
   text-decoration: none;
   color: #07111f;
   background: #ffffff;
   font-weight: 800;
-  transition: transform 0.18s ease, opacity 0.18s ease;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+}
+
+.link-button span {
+  display: block;
+  font-size: 1rem;
+}
+
+.link-button small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(7, 17, 31, 0.62);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .link-button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.24);
 }
 
 .link-button:active {
-  transform: scale(0.98);
-  opacity: 0.85;
+  transform: scale(0.985);
+  opacity: 0.86;
 }
 
 .warning-link {
-  background: #ffd6d6;
+  background: #ffe1e1;
   color: #4b0808;
 }
 
+.warning-link small {
+  color: rgba(75, 8, 8, 0.62);
+}
+
 .fun-link {
-  background: #dff3ff;
+  background: #e1f4ff;
   color: #06283a;
 }
 
+.fun-link small {
+  color: rgba(6, 40, 58, 0.62);
+}
+
 footer {
-  margin-top: 28px;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.72);
+  margin-top: 30px;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 footer a {
-  color: #9dccff;
+  color: #ffd65a;
   font-weight: 800;
   text-decoration: none;
 }
@@ -134,10 +176,19 @@ footer a:hover {
 
   .card {
     padding: 24px 18px;
-    border-radius: 24px;
+    border-radius: 26px;
+  }
+
+  .logo {
+    width: 84px;
+    height: 84px;
   }
 
   .description {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
+  }
+
+  .link-button {
+    padding: 15px 16px;
   }
 }
