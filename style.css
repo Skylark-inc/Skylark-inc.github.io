@@ -26,7 +26,7 @@ body {
 
 .card {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   padding: 28px;
   text-align: center;
   border-radius: 28px;
@@ -62,23 +62,24 @@ h1 {
 }
 
 .description {
-  margin: 18px auto 26px;
-  max-width: 380px;
+  margin: 18px auto 28px;
+  max-width: 410px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 1rem;
   line-height: 1.55;
 }
 
-.toc {
-  margin-top: 18px;
+.link-section {
+  margin-top: 24px;
 }
 
-.toc h2 {
+.link-section h2 {
   margin: 0 0 14px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.toc-button {
+.link-button {
   display: block;
   width: 100%;
   margin: 12px 0;
@@ -91,17 +92,27 @@ h1 {
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
-.toc-button:hover {
+.link-button:hover {
   transform: translateY(-2px);
 }
 
-.toc-button:active {
+.link-button:active {
   transform: scale(0.98);
   opacity: 0.85;
 }
 
+.warning-link {
+  background: #ffd6d6;
+  color: #4b0808;
+}
+
+.fun-link {
+  background: #dff3ff;
+  color: #06283a;
+}
+
 footer {
-  margin-top: 26px;
+  margin-top: 28px;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.72);
 }
