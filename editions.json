@@ -5,8 +5,8 @@
     "min": "14.3",
     "max": "14.8.1",
     "beta": false,
-    "alert": false,
-    "alertMessage": "No active alerts.",
+    "alert": true,
+    "alertMessage": "Currently this edition is not updated, please wait for more info.",
     "link": "https://www.icloud.com/shortcuts/0e72496714944ee296007b436b4d3a8f"
   },
   {
