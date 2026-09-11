@@ -2,98 +2,838 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
+  <meta
+    name="theme-color"
+    content="#07111f"
+  />
 
   <title>Skylark Inc</title>
 
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="/0019A648-6056-4C45-B1F3-145DB1BBA696.png" />
-  <link rel="apple-touch-icon" href="/0019A648-6056-4C45-B1F3-145DB1BBA696.png" />
+  <link
+    rel="stylesheet"
+    href="/style.css"
+  />
+
+  <link
+    rel="icon"
+    href="/0019A648-6056-4C45-B1F3-145DB1BBA696.png"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    href="/0019A648-6056-4C45-B1F3-145DB1BBA696.png"
+  />
 </head>
 
 <body>
+
   <main class="page">
-    <section class="card">
-      <img src="/0019A648-6056-4C45-B1F3-145DB1BBA696.png" alt="Skylark icon" class="logo" />
 
-      <p class="eyebrow">Skylark Inc</p>
+    <div class="site-shell">
 
-      <h1>Welcome to Skylark</h1>
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
 
-      <p class="description">
-        Skylark is a Siri Shortcut for iPhone and iPad that helps make changing your wallpaper simple,
-        personal, and more enjoyable.
-      </p>
+      <header class="hero">
 
-      <div id="device-warning" class="device-warning" hidden>
-        <strong>Device not compatible.</strong>
-        Skylark is made for iPhone. You can still browse support articles, updates, and other Skylark pages.
+        <img
+          src="/0019A648-6056-4C45-B1F3-145DB1BBA696.png"
+          alt="Skylark icon"
+          class="logo"
+        />
+
+        <p class="eyebrow">
+          Skylark Inc
+        </p>
+
+        <h1>
+          Welcome to Skylark
+        </h1>
+
+        <p class="description">
+          Skylark is a Siri Shortcut for iPhone and iPad that helps make
+          changing your wallpaper simple, personal, and more enjoyable.
+        </p>
+
+      </header>
+
+
+      <!-- =====================================================
+           DEVICE WARNING
+      ====================================================== -->
+
+      <div
+        id="device-warning"
+        class="device-warning"
+        hidden
+      >
+        <div class="warning-icon">
+          !
+        </div>
+
+        <div>
+          <strong>
+            This device isn’t compatible with Skylark.
+          </strong>
+
+          <p>
+            Skylark is designed for iPhone and iPad, but you can still
+            browse articles, release information, and other pages.
+          </p>
+        </div>
       </div>
 
-      <section class="link-section">
-        <h2>Table of Contents</h2>
 
-        <a class="link-button" href="/Join/">
-          <span>Join Skylark Servers</span>
-          <small>Get started with Skylark</small>
-        </a>
+      <!-- =====================================================
+           SEARCH
+      ====================================================== -->
 
-        <a class="link-button" href="/FindEdition/">
-          <span>Find your Skylark Edition</span>
-          <small>For new and returning users</small>
-        </a>
+      <section class="search-section">
 
-        <a class="link-button" href="/Support/">
-          <span>Support</span>
-          <small>Articles, help, and known issues</small>
-        </a>
+        <label
+          for="siteSearch"
+          class="search-label"
+        >
+          Search Skylark
+        </label>
 
-        <a class="link-button" href="/UpgradeEdition/">
-          <span>Upgrade your old Edition</span>
-          <small>Move from an older Skylark Edition</small>
-        </a>
+        <div class="search-box">
+
+          <svg
+            class="search-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M10.8 5.2a5.6 5.6 0 1 0 0 11.2 5.6 5.6 0 0 0 0-11.2Zm-7.4 5.6a7.4 7.4 0 1 1 13.1 4.7l4.6 4.6-1.3 1.3-4.6-4.6a7.4 7.4 0 0 1-11.8-6Z"
+            />
+          </svg>
+
+          <input
+            type="search"
+            id="siteSearch"
+            placeholder="Search pages"
+            autocomplete="off"
+            spellcheck="false"
+          />
+
+          <button
+            type="button"
+            id="clearSearch"
+            class="clear-search"
+            aria-label="Clear search"
+            hidden
+          >
+            ×
+          </button>
+
+        </div>
+
+        <p
+          id="searchStatus"
+          class="search-status"
+          aria-live="polite"
+        ></p>
+
       </section>
 
-      <section class="link-section">
-        <h2>Important Articles</h2>
 
-        <a class="link-button warning-link" href="/Support/Obsolete/">
-          <span>Skylark Obsolete</span>
-          <small>Important issue affecting Skylark</small>
-        </a>
+      <!-- =====================================================
+           NEWLY RELEASED
+      ====================================================== -->
+
+      <section
+        class="content-section searchable-section"
+        data-section
+      >
+
+        <div class="section-heading">
+
+          <div>
+            <p class="section-kicker">
+              Latest
+            </p>
+
+            <h2>
+              Newly Released
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="product-grid">
+
+          <a
+            class="product-card new-release searchable-item"
+            href="https://skylark-inc.github.io/Skylark-Edition27/"
+            data-search="Skylark Edition 27 newly released latest release iOS 27"
+          >
+
+            <img
+              src="https://skylark-inc.github.io/Skylark-Edition27/Skylark-Edition-27-Icon.jpeg"
+              alt="Skylark Edition 27 icon"
+              class="product-icon"
+            />
+
+            <div class="product-info">
+
+              <span class="new-badge">
+                New
+              </span>
+
+              <h3>
+                Skylark (Edition 27)
+              </h3>
+
+              <p>
+                Explore the newest Skylark Edition.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
+        </div>
+
       </section>
 
-      <section class="link-section">
-        <h2>Fun Activities</h2>
 
-        <a class="link-button fun-link" href="/MyPhotoPond/">
-          <span>My Photo Pond</span>
-          <small>A small Skylark activity</small>
-        </a>
+      <!-- =====================================================
+           TABLE OF CONTENTS
+      ====================================================== -->
+
+      <section
+        class="content-section searchable-section"
+        data-section
+      >
+
+        <div class="section-heading">
+
+          <div>
+            <p class="section-kicker">
+              Explore
+            </p>
+
+            <h2>
+              Table of Contents
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="link-grid">
+
+          <a
+            class="nav-card searchable-item"
+            href="/Join/"
+            data-search="Join Skylark Servers get started server"
+          >
+            <div>
+              <h3>
+                Join Skylark Servers
+              </h3>
+
+              <p>
+                Get started with Skylark.
+              </p>
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+          </a>
+
+
+          <a
+            class="nav-card searchable-item"
+            href="/Support/"
+            data-search="Support help articles known issues troubleshooting"
+          >
+            <div>
+              <h3>
+                Support
+              </h3>
+
+              <p>
+                Articles, help, and known issues.
+              </p>
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+          </a>
+
+
+          <a
+            class="nav-card searchable-item"
+            href="/UpgradeEdition/"
+            data-search="Upgrade old Skylark Edition update edition"
+          >
+            <div>
+              <h3>
+                Upgrade your old Edition
+              </h3>
+
+              <p>
+                Move from an older Skylark Edition.
+              </p>
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+          </a>
+
+        </div>
+
       </section>
+
+
+      <!-- =====================================================
+           AVAILABLE EDITIONS
+      ====================================================== -->
+
+      <section
+        class="content-section searchable-section"
+        data-section
+      >
+
+        <div class="section-heading">
+
+          <div>
+            <p class="section-kicker">
+              Downloads
+            </p>
+
+            <h2>
+              Available Editions
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="product-grid">
+
+          <a
+            class="product-card searchable-item"
+            href="https://skylark-inc.github.io/Skylark-Edition26/"
+            data-search="Skylark Edition 26 available edition download"
+          >
+
+            <img
+              src="https://skylark-inc.github.io/Skylark-Edition26/skylark-edition26-apple-touch-icon.png"
+              alt="Skylark Edition 26 icon"
+              class="product-icon"
+            />
+
+            <div class="product-info">
+
+              <h3>
+                Skylark (Edition 26)
+              </h3>
+
+              <p>
+                View the official Edition 26 release page.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <p
+          class="edition-finder searchable-item finder-search-item"
+          data-search="find edition finder can't find your edition supported edition"
+        >
+          Can’t find your edition?
+          <a href="/FindEdition/">
+            Find it here
+          </a>
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           IMPORTANT ARTICLES
+      ====================================================== -->
+
+      <section
+        class="content-section searchable-section"
+        data-section
+      >
+
+        <div class="section-heading">
+
+          <div>
+            <p class="section-kicker">
+              Important
+            </p>
+
+            <h2>
+              Important Articles
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="link-grid">
+
+          <a
+            class="nav-card warning-card searchable-item"
+            href="/Support/Obsolete/"
+            data-search="Skylark Obsolete important article issue obsolete support"
+          >
+
+            <div>
+
+              <h3>
+                Skylark Obsolete
+              </h3>
+
+              <p>
+                Important information about obsolete Skylark versions.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           FUN ACTIVITIES
+      ====================================================== -->
+
+      <section
+        class="content-section searchable-section"
+        data-section
+      >
+
+        <div class="section-heading">
+
+          <div>
+            <p class="section-kicker">
+              Extras
+            </p>
+
+            <h2>
+              Fun Activities
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="link-grid">
+
+          <a
+            class="nav-card fun-card searchable-item"
+            href="/MyPhotoPond/"
+            data-search="My Photo Pond fun activity photos"
+          >
+
+            <div>
+
+              <h3>
+                My Photo Pond
+              </h3>
+
+              <p>
+                A small Skylark activity.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           NO SEARCH RESULTS
+      ====================================================== -->
+
+      <div
+        id="noResults"
+        class="no-results"
+        hidden
+      >
+
+        <strong>
+          Nothing found
+        </strong>
+
+        <p>
+          Try another Skylark page or edition name.
+        </p>
+
+      </div>
+
+
+      <!-- =====================================================
+           FOOTER
+      ====================================================== -->
 
       <footer>
+
         <p>
           Follow Skylark on
-          <a href="https://x.com/UseSkylark" target="_blank" rel="noopener noreferrer">@UseSkylark</a>
+
+          <a
+            href="https://x.com/UseSkylark"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @UseSkylark
+          </a>
         </p>
+
       </footer>
-    </section>
+
+    </div>
+
   </main>
 
+
   <script>
-    const ua = navigator.userAgent || navigator.vendor || "";
 
-    const isIPhone = /iPhone|iPod/i.test(ua);
-    const isIPad = /iPad/i.test(ua);
-    const isMac = /Macintosh|Mac OS X/i.test(ua);
-    const isAndroid = /Android/i.test(ua);
+    /* ========================================================
+       DEVICE COMPATIBILITY MESSAGE
 
-    const isCompatibleOrAllowed = isIPhone || isIPad || isMac;
+       iPhone / iPad:
+       No warning.
 
-    if (!isCompatibleOrAllowed || isAndroid) {
-      document.getElementById("device-warning").hidden = false;
+       Mac:
+       No warning.
+
+       Android / Windows / Linux / other platforms:
+       Show warning.
+    ======================================================== */
+
+    const ua =
+      navigator.userAgent ||
+      navigator.vendor ||
+      "";
+
+
+    const platform =
+      navigator.platform ||
+      "";
+
+
+    const touchPoints =
+      navigator.maxTouchPoints ||
+      0;
+
+
+    const isIPhone =
+      /iPhone|iPod/i.test(ua);
+
+
+    const isNormalIPad =
+      /iPad/i.test(ua);
+
+
+    /*
+      Modern iPads may identify themselves
+      as Macintosh.
+    */
+
+    const isModernIPad =
+      platform === "MacIntel" &&
+      touchPoints > 1;
+
+
+    const isIPad =
+      isNormalIPad ||
+      isModernIPad;
+
+
+    const isMac =
+      (
+        /Macintosh|Mac OS X/i.test(ua) ||
+        platform === "MacIntel"
+      ) &&
+      !isModernIPad;
+
+
+    const isAndroid =
+      /Android/i.test(ua);
+
+
+    const isAllowedDevice =
+      isIPhone ||
+      isIPad ||
+      isMac;
+
+
+    if(
+      !isAllowedDevice ||
+      isAndroid
+    ){
+
+      document
+        .getElementById("device-warning")
+        .hidden = false;
+
     }
+
+
+
+    /* ========================================================
+       HOMEPAGE SEARCH
+
+       This searches the pages/products displayed
+       on this homepage.
+
+       It does not crawl the entire website.
+    ======================================================== */
+
+    const searchInput =
+      document.getElementById("siteSearch");
+
+
+    const clearSearch =
+      document.getElementById("clearSearch");
+
+
+    const searchStatus =
+      document.getElementById("searchStatus");
+
+
+    const noResults =
+      document.getElementById("noResults");
+
+
+    const searchableItems =
+      Array.from(
+        document.querySelectorAll(
+          ".searchable-item"
+        )
+      );
+
+
+    const sections =
+      Array.from(
+        document.querySelectorAll(
+          "[data-section]"
+        )
+      );
+
+
+    function normalizeSearchText(text){
+
+      return text
+        .toLowerCase()
+        .replace(/[’']/g, "")
+        .trim();
+
+    }
+
+
+
+    function performSearch(){
+
+      const query =
+        normalizeSearchText(
+          searchInput.value
+        );
+
+
+      clearSearch.hidden =
+        query.length === 0;
+
+
+      /*
+        No search:
+        restore everything.
+      */
+
+      if(!query){
+
+        searchableItems.forEach(
+          item => {
+
+            item.hidden =
+              false;
+
+          }
+        );
+
+
+        sections.forEach(
+          section => {
+
+            section.hidden =
+              false;
+
+          }
+        );
+
+
+        noResults.hidden =
+          true;
+
+
+        searchStatus.textContent =
+          "";
+
+
+        return;
+
+      }
+
+
+      let resultCount =
+        0;
+
+
+      searchableItems.forEach(
+        item => {
+
+          const searchableText =
+            normalizeSearchText(
+              (
+                item.dataset.search ||
+                ""
+              ) +
+              " " +
+              item.textContent
+            );
+
+
+          const matches =
+            searchableText.includes(
+              query
+            );
+
+
+          item.hidden =
+            !matches;
+
+
+          if(matches){
+
+            resultCount++;
+
+          }
+
+        }
+      );
+
+
+      /*
+        Hide sections with no matching items.
+      */
+
+      sections.forEach(
+        section => {
+
+          const visibleItems =
+            section.querySelectorAll(
+              ".searchable-item:not([hidden])"
+            );
+
+
+          section.hidden =
+            visibleItems.length === 0;
+
+        }
+      );
+
+
+      noResults.hidden =
+        resultCount !== 0;
+
+
+      searchStatus.textContent =
+        resultCount === 1
+          ? "1 result"
+          : resultCount + " results";
+
+    }
+
+
+
+    searchInput.addEventListener(
+      "input",
+      performSearch
+    );
+
+
+
+    clearSearch.addEventListener(
+      "click",
+      () => {
+
+        searchInput.value =
+          "";
+
+        performSearch();
+
+        searchInput.focus();
+
+      }
+    );
+
   </script>
+
 </body>
 </html>
