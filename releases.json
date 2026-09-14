@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2026-09-13",
+  "releases": [
+    {
+      "id": "skylark-e",
+      "product": "Skylark e",
+      "type": "non-server",
+      "minimumOS": "18.0",
+      "maximumOS": null,
+      "releasePage": "https://skylark-inc.github.io/Skylark-e/",
+      "downloadURL": "https://www.icloud.com/shortcuts/77a1b8df31df4b86bc9c2a80093ae886",
+      "available": true,
+      "eol": false
+    },
+    {
+      "id": "skylark-fe",
+      "product": "Skylark Fe",
+      "type": "non-server",
+      "minimumOS": "15.0",
+      "maximumOS": "17.7.11",
+      "releasePage": "",
+      "downloadURL": "https://www.icloud.com/shortcuts/5495da73db6a45eb9a6d1edfee7ec315",
+      "available": true,
+      "eol": false
+    },
+    {
+      "id": "skylark-se",
+      "product": "Skylark Se",
+      "type": "non-server",
+      "minimumOS": "14.3",
+      "maximumOS": "14.8.1",
+      "releasePage": "https://skylark-inc.github.io/SE/",
+      "downloadURL": null,
+      "available": false,
+      "eol": false
+    },
+    {
+      "id": "nxt",
+      "product": "nXt",
+      "type": "non-server",
+      "minimumOS": "26.0",
+      "maximumOS": null,
+      "releasePage": "https://skylark-inc.github.io/nXt",
+      "downloadURL": null,
+      "available": false,
+      "eol": false
+    }
+  ]
+}
