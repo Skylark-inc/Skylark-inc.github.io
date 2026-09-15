@@ -77,10 +77,10 @@
     "min": "27.0",
     "max": "27.0",
     "beta": false,
-    "alert": true,
-    "alertMessage": "Skylark (edition 27) has been delayed due to an issue.",
+    "alert": false,
+    "alertMessage": ".",
     "eol": false,
     "releasePage": "https://skylark-inc.github.io/Skylark-Edition27",
-    "link": ""
+    "link": "https://www.icloud.com/shortcuts/9d75b0011b2a41edac49c815ca53592c"
   }
 ]
