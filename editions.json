@@ -75,7 +75,7 @@
     "edition": "Edition 27",
     "version": "v1.0",
     "min": "27.0",
-    "max": "27.0",
+    "max": "27.2",
     "beta": false,
     "alert": false,
     "alertMessage": ".",
