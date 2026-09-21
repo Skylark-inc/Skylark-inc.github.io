@@ -10,7 +10,14 @@
 
   <meta
     name="theme-color"
-    content="#07111f"
+    content="#f5f5f7"
+    media="(prefers-color-scheme: light)"
+  />
+
+  <meta
+    name="theme-color"
+    content="#080b10"
+    media="(prefers-color-scheme: dark)"
   />
 
   <title>Skylark Inc</title>
@@ -36,6 +43,7 @@
   <main class="page">
 
     <div class="site-shell">
+
 
       <!-- =====================================================
            HERO
@@ -67,6 +75,11 @@
 
       <!-- =====================================================
            DEVICE WARNING
+
+           Shown on Android, Windows, Linux, and other
+           unsupported platforms.
+
+           Mac is allowed to browse without the warning.
       ====================================================== -->
 
       <div
@@ -74,20 +87,27 @@
         class="device-warning"
         hidden
       >
-        <div class="warning-icon">
+
+        <div
+          class="warning-icon"
+          aria-hidden="true"
+        >
           !
         </div>
 
         <div>
+
           <strong>
             This device isn’t compatible with Skylark.
           </strong>
 
           <p>
             Skylark is designed for iPhone and iPad, but you can still
-            browse articles, release information, and other pages.
+            browse articles, release information, and other Skylark pages.
           </p>
+
         </div>
+
       </div>
 
 
@@ -104,7 +124,10 @@
           Search Skylark
         </label>
 
-        <div class="search-box">
+        <form
+          id="siteSearchForm"
+          class="search-box"
+        >
 
           <svg
             class="search-icon"
@@ -119,28 +142,25 @@
           <input
             type="search"
             id="siteSearch"
-            placeholder="Search pages"
+            placeholder="Search a Skylark page"
             autocomplete="off"
+            autocapitalize="none"
             spellcheck="false"
+            aria-label="Search Skylark pages"
           />
 
           <button
-            type="button"
-            id="clearSearch"
-            class="clear-search"
-            aria-label="Clear search"
-            hidden
+            type="submit"
+            class="search-go"
           >
-            ×
+            Go
           </button>
 
-        </div>
+        </form>
 
-        <p
-          id="searchStatus"
-          class="search-status"
-          aria-live="polite"
-        ></p>
+        <p class="search-help">
+          Enter the name of a Skylark page to visit it.
+        </p>
 
       </section>
 
@@ -149,14 +169,12 @@
            NEWLY RELEASED
       ====================================================== -->
 
-      <section
-        class="content-section searchable-section"
-        data-section
-      >
+      <section class="content-section">
 
         <div class="section-heading">
 
           <div>
+
             <p class="section-kicker">
               Latest
             </p>
@@ -164,6 +182,7 @@
             <h2>
               Newly Released
             </h2>
+
           </div>
 
         </div>
@@ -172,9 +191,8 @@
         <div class="product-grid">
 
           <a
-            class="product-card new-release searchable-item"
+            class="product-card new-release"
             href="https://skylark-inc.github.io/Skylark-Edition27/"
-            data-search="Skylark Edition 27 newly released latest release iOS 27"
           >
 
             <img
@@ -217,14 +235,12 @@
            TABLE OF CONTENTS
       ====================================================== -->
 
-      <section
-        class="content-section searchable-section"
-        data-section
-      >
+      <section class="content-section">
 
         <div class="section-heading">
 
           <div>
+
             <p class="section-kicker">
               Explore
             </p>
@@ -232,6 +248,7 @@
             <h2>
               Table of Contents
             </h2>
+
           </div>
 
         </div>
@@ -240,11 +257,12 @@
         <div class="link-grid">
 
           <a
-            class="nav-card searchable-item"
+            class="nav-card"
             href="/Join/"
-            data-search="Join Skylark Servers get started server"
           >
+
             <div>
+
               <h3>
                 Join Skylark Servers
               </h3>
@@ -252,6 +270,7 @@
               <p>
                 Get started with Skylark.
               </p>
+
             </div>
 
             <span
@@ -260,15 +279,17 @@
             >
               ›
             </span>
+
           </a>
 
 
           <a
-            class="nav-card searchable-item"
+            class="nav-card"
             href="/Support/"
-            data-search="Support help articles known issues troubleshooting"
           >
+
             <div>
+
               <h3>
                 Support
               </h3>
@@ -276,6 +297,7 @@
               <p>
                 Articles, help, and known issues.
               </p>
+
             </div>
 
             <span
@@ -284,15 +306,17 @@
             >
               ›
             </span>
+
           </a>
 
 
           <a
-            class="nav-card searchable-item"
+            class="nav-card"
             href="/UpgradeEdition/"
-            data-search="Upgrade old Skylark Edition update edition"
           >
+
             <div>
+
               <h3>
                 Upgrade your old Edition
               </h3>
@@ -300,6 +324,7 @@
               <p>
                 Move from an older Skylark Edition.
               </p>
+
             </div>
 
             <span
@@ -308,6 +333,7 @@
             >
               ›
             </span>
+
           </a>
 
         </div>
@@ -319,14 +345,12 @@
            AVAILABLE EDITIONS
       ====================================================== -->
 
-      <section
-        class="content-section searchable-section"
-        data-section
-      >
+      <section class="content-section">
 
         <div class="section-heading">
 
           <div>
+
             <p class="section-kicker">
               Downloads
             </p>
@@ -334,6 +358,7 @@
             <h2>
               Available Editions
             </h2>
+
           </div>
 
         </div>
@@ -341,10 +366,12 @@
 
         <div class="product-grid">
 
+
+          <!-- EDITION 26 -->
+
           <a
-            class="product-card searchable-item"
+            class="product-card"
             href="https://skylark-inc.github.io/Skylark-Edition26/"
-            data-search="Skylark Edition 26 available edition download"
           >
 
             <img
@@ -374,14 +401,47 @@
 
           </a>
 
+
+          <!-- EDITION 5 -->
+
+          <a
+            class="product-card"
+            href="https://skylark-inc.github.io/Skylark-Edition5/"
+          >
+
+            <img
+              src="https://skylark-inc.github.io/Skylark-Edition5/Skylrk5-appicon.jpeg"
+              alt="Skylark Edition 5 icon"
+              class="product-icon"
+            />
+
+            <div class="product-info">
+
+              <h3>
+                Skylark (Edition 5)
+              </h3>
+
+              <p>
+                View the official Edition 5 release page.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
         </div>
 
 
-        <p
-          class="edition-finder searchable-item finder-search-item"
-          data-search="find edition finder can't find your edition supported edition"
-        >
+        <p class="edition-finder">
           Can’t find your edition?
+
           <a href="/FindEdition/">
             Find it here
           </a>
@@ -394,14 +454,12 @@
            IMPORTANT ARTICLES
       ====================================================== -->
 
-      <section
-        class="content-section searchable-section"
-        data-section
-      >
+      <section class="content-section">
 
         <div class="section-heading">
 
           <div>
+
             <p class="section-kicker">
               Important
             </p>
@@ -409,6 +467,7 @@
             <h2>
               Important Articles
             </h2>
+
           </div>
 
         </div>
@@ -417,9 +476,8 @@
         <div class="link-grid">
 
           <a
-            class="nav-card warning-card searchable-item"
+            class="nav-card warning-card"
             href="/Support/Obsolete/"
-            data-search="Skylark Obsolete important article issue obsolete support"
           >
 
             <div>
@@ -452,14 +510,12 @@
            FUN ACTIVITIES
       ====================================================== -->
 
-      <section
-        class="content-section searchable-section"
-        data-section
-      >
+      <section class="content-section">
 
         <div class="section-heading">
 
           <div>
+
             <p class="section-kicker">
               Extras
             </p>
@@ -467,6 +523,7 @@
             <h2>
               Fun Activities
             </h2>
+
           </div>
 
         </div>
@@ -475,9 +532,8 @@
         <div class="link-grid">
 
           <a
-            class="nav-card fun-card searchable-item"
+            class="nav-card fun-card"
             href="/MyPhotoPond/"
-            data-search="My Photo Pond fun activity photos"
           >
 
             <div>
@@ -504,27 +560,6 @@
         </div>
 
       </section>
-
-
-      <!-- =====================================================
-           NO SEARCH RESULTS
-      ====================================================== -->
-
-      <div
-        id="noResults"
-        class="no-results"
-        hidden
-      >
-
-        <strong>
-          Nothing found
-        </strong>
-
-        <p>
-          Try another Skylark page or edition name.
-        </p>
-
-      </div>
 
 
       <!-- =====================================================
@@ -555,16 +590,19 @@
   <script>
 
     /* ========================================================
-       DEVICE COMPATIBILITY MESSAGE
+       DEVICE COMPATIBILITY
 
-       iPhone / iPad:
-       No warning.
+       iPhone:
+       Supported, no warning.
+
+       iPad:
+       Supported, no warning.
 
        Mac:
-       No warning.
+       Allowed to browse, no warning.
 
-       Android / Windows / Linux / other platforms:
-       Show warning.
+       Android / Windows / Linux / others:
+       Show compatibility warning.
     ======================================================== */
 
     const ua =
@@ -592,8 +630,7 @@
 
 
     /*
-      Modern iPads may identify themselves
-      as Macintosh.
+      Modern iPads may identify themselves as Macs.
     */
 
     const isModernIPad =
@@ -638,197 +675,109 @@
 
 
     /* ========================================================
-       HOMEPAGE SEARCH
+       SKYLARK PAGE SEARCH
 
-       This searches the pages/products displayed
-       on this homepage.
+       This is intentionally a direct GitHub Pages navigator.
 
-       It does not crawl the entire website.
+       Examples:
+
+       Support
+       -> https://skylark-inc.github.io/Support/
+
+       Skylark-Edition26
+       -> https://skylark-inc.github.io/Skylark-Edition26/
+
+       SomethingThatDoesNotExist
+       -> GitHub Pages 404
+
+       The search does NOT need a database of pages.
     ======================================================== */
 
-    const searchInput =
-      document.getElementById("siteSearch");
-
-
-    const clearSearch =
-      document.getElementById("clearSearch");
-
-
-    const searchStatus =
-      document.getElementById("searchStatus");
-
-
-    const noResults =
-      document.getElementById("noResults");
-
-
-    const searchableItems =
-      Array.from(
-        document.querySelectorAll(
-          ".searchable-item"
-        )
+    const siteSearchForm =
+      document.getElementById(
+        "siteSearchForm"
       );
 
 
-    const sections =
-      Array.from(
-        document.querySelectorAll(
-          "[data-section]"
-        )
+    const siteSearch =
+      document.getElementById(
+        "siteSearch"
       );
 
 
-    function normalizeSearchText(text){
+    siteSearchForm.addEventListener(
+      "submit",
+      event => {
 
-      return text
-        .toLowerCase()
-        .replace(/[’']/g, "")
-        .trim();
-
-    }
+        event.preventDefault();
 
 
-
-    function performSearch(){
-
-      const query =
-        normalizeSearchText(
-          searchInput.value
-        );
+        let value =
+          siteSearch.value.trim();
 
 
-      clearSearch.hidden =
-        query.length === 0;
+        if(!value){
 
+          siteSearch.focus();
 
-      /*
-        No search:
-        restore everything.
-      */
-
-      if(!query){
-
-        searchableItems.forEach(
-          item => {
-
-            item.hidden =
-              false;
-
-          }
-        );
-
-
-        sections.forEach(
-          section => {
-
-            section.hidden =
-              false;
-
-          }
-        );
-
-
-        noResults.hidden =
-          true;
-
-
-        searchStatus.textContent =
-          "";
-
-
-        return;
-
-      }
-
-
-      let resultCount =
-        0;
-
-
-      searchableItems.forEach(
-        item => {
-
-          const searchableText =
-            normalizeSearchText(
-              (
-                item.dataset.search ||
-                ""
-              ) +
-              " " +
-              item.textContent
-            );
-
-
-          const matches =
-            searchableText.includes(
-              query
-            );
-
-
-          item.hidden =
-            !matches;
-
-
-          if(matches){
-
-            resultCount++;
-
-          }
+          return;
 
         }
-      );
 
 
-      /*
-        Hide sections with no matching items.
-      */
+        /*
+          If someone pastes a Skylark URL,
+          strip the domain first.
+        */
 
-      sections.forEach(
-        section => {
-
-          const visibleItems =
-            section.querySelectorAll(
-              ".searchable-item:not([hidden])"
-            );
+        value =
+          value.replace(
+            /^https?:\/\/skylark-inc\.github\.io\//i,
+            ""
+          );
 
 
-          section.hidden =
-            visibleItems.length === 0;
+        /*
+          Remove leading and trailing slashes.
+
+          Internal slashes remain, allowing searches such as:
+
+          Support/Obsolete
+        */
+
+        value =
+          value.replace(
+            /^\/+|\/+$/g,
+            ""
+          );
+
+
+        /*
+          If only the root URL was entered,
+          return to the homepage.
+        */
+
+        if(!value){
+
+          window.location.href =
+            "https://skylark-inc.github.io/";
+
+          return;
 
         }
-      );
 
 
-      noResults.hidden =
-        resultCount !== 0;
+        /*
+          Navigate directly to that path.
 
+          If it doesn't exist, GitHub Pages handles
+          the 404 page naturally.
+        */
 
-      searchStatus.textContent =
-        resultCount === 1
-          ? "1 result"
-          : resultCount + " results";
-
-    }
-
-
-
-    searchInput.addEventListener(
-      "input",
-      performSearch
-    );
-
-
-
-    clearSearch.addEventListener(
-      "click",
-      () => {
-
-        searchInput.value =
-          "";
-
-        performSearch();
-
-        searchInput.focus();
+        window.location.href =
+          "https://skylark-inc.github.io/" +
+          encodeURI(value) +
+          "/";
 
       }
     );
