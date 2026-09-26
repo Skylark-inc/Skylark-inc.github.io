@@ -51,7 +51,7 @@
     "edition": "Edition 5",
     "version": "v1.3",
     "min": "18.0",
-    "max": "18.7.8",
+    "max": "18.7.10",
     "beta": false,
     "alert": false,
     "alertMessage": "No active alerts.",
