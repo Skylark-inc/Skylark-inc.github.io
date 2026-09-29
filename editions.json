@@ -69,7 +69,8 @@
     "alertMessage": "No active alerts.",
     "eol": false,
     "releasePage": "https://skylark-inc.github.io/Skylark-Edition26",
-    "link": "https://www.icloud.com/shortcuts/7d68566ec6124f3c95c6ab1e57216026"
+    "link": "https://www.icloud.com/shortcuts/7d68566ec6124f3c95c6ab1e57216026",
+    "iPadOSLink": ""
   },
   {
     "edition": "Edition 27",
@@ -81,6 +82,7 @@
     "alertMessage": ".",
     "eol": false,
     "releasePage": "https://skylark-inc.github.io/Skylark-Edition27",
-    "link": "https://www.icloud.com/shortcuts/9d75b0011b2a41edac49c815ca53592c"
+    "link": "https://www.icloud.com/shortcuts/9d75b0011b2a41edac49c815ca53592c",
+    "iPadOSLink": ""
   }
 ]
