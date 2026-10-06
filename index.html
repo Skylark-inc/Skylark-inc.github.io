@@ -75,11 +75,6 @@
 
       <!-- =====================================================
            DEVICE WARNING
-
-           Shown on Android, Windows, Linux, and other
-           unsupported platforms.
-
-           Mac is allowed to browse without the warning.
       ====================================================== -->
 
       <div
@@ -190,9 +185,13 @@
 
         <div class="product-grid">
 
+
+          <!-- SKYLARK EDITION 27 -->
+
           <a
-            class="product-card new-release"
-            href="https://skylark-inc.github.io/Skylark-Edition27/"
+            class="product-card new-release edition-release-link"
+            data-edition="Edition 27"
+            href="/FindEdition/"
           >
 
             <img
@@ -213,6 +212,45 @@
 
               <p>
                 Explore the newest Skylark Edition.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
+
+          <!-- nXt -->
+
+          <a
+            class="product-card new-release"
+            href="https://skylark-inc.github.io/nXt/"
+          >
+
+            <img
+              src="https://skylark-inc.github.io/nXt/nXt_icon.jpeg"
+              alt="nXt icon"
+              class="product-icon"
+            />
+
+            <div class="product-info">
+
+              <span class="new-badge">
+                New
+              </span>
+
+              <h3>
+                nXt
+              </h3>
+
+              <p>
+                Ready for something nXt?
               </p>
 
             </div>
@@ -370,8 +408,9 @@
           <!-- EDITION 26 -->
 
           <a
-            class="product-card"
-            href="https://skylark-inc.github.io/Skylark-Edition26/"
+            class="product-card edition-release-link"
+            data-edition="Edition 26"
+            href="/FindEdition/"
           >
 
             <img
@@ -405,8 +444,9 @@
           <!-- EDITION 5 -->
 
           <a
-            class="product-card"
-            href="https://skylark-inc.github.io/Skylark-Edition5/"
+            class="product-card edition-release-link"
+            data-edition="Edition 5"
+            href="/FindEdition/"
           >
 
             <img
@@ -436,14 +476,122 @@
 
           </a>
 
+
+          <!-- EDITION 4 -->
+
+          <a
+            class="product-card edition-release-link"
+            data-edition="Edition 4"
+            href="/FindEdition/"
+          >
+
+            <img
+              src="https://skylark-inc.github.io/Skylark-Edition4/Skylrk-Edition4-icon.jpeg"
+              alt="Skylark Edition 4 icon"
+              class="product-icon"
+            />
+
+            <div class="product-info">
+
+              <h3>
+                Skylark (Edition 4)
+              </h3>
+
+              <p>
+                View the official Edition 4 release page.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
+
+          <!-- EDITION 3 -->
+
+          <a
+            class="product-card edition-release-link"
+            data-edition="Edition 3"
+            href="/FindEdition/"
+          >
+
+            <img
+              src="https://skylark-inc.github.io/Skylark-Edition3/Skylrk3-iconchrip.jpeg"
+              alt="Skylark Edition 3 icon"
+              class="product-icon"
+            />
+
+            <div class="product-info">
+
+              <h3>
+                Skylark (Edition 3)
+              </h3>
+
+              <p>
+                View the official Edition 3 release page.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
+
+          <!-- EDITION 2 -->
+
+          <a
+            class="product-card edition-release-link"
+            data-edition="Edition 2"
+            href="/FindEdition/"
+          >
+
+            <img
+              src="https://skylark-inc.github.io/Skylark-Edition2/Skylrk-2-icon.jpeg"
+              alt="Skylark Edition 2 icon"
+              class="product-icon"
+            />
+
+            <div class="product-info">
+
+              <h3>
+                Skylark (Edition 2)
+              </h3>
+
+              <p>
+                View the official Edition 2 release page.
+              </p>
+
+            </div>
+
+            <span
+              class="chevron"
+              aria-hidden="true"
+            >
+              ›
+            </span>
+
+          </a>
+
         </div>
 
 
         <p class="edition-finder">
-          Can’t find your edition?
+          Don’t know which is your edition?
 
           <a href="/FindEdition/">
-            Find it here
+            Find out here
           </a>
         </p>
 
@@ -591,18 +739,6 @@
 
     /* ========================================================
        DEVICE COMPATIBILITY
-
-       iPhone:
-       Supported, no warning.
-
-       iPad:
-       Supported, no warning.
-
-       Mac:
-       Allowed to browse, no warning.
-
-       Android / Windows / Linux / others:
-       Show compatibility warning.
     ======================================================== */
 
     const ua =
@@ -628,10 +764,6 @@
     const isNormalIPad =
       /iPad/i.test(ua);
 
-
-    /*
-      Modern iPads may identify themselves as Macs.
-    */
 
     const isModernIPad =
       platform === "MacIntel" &&
@@ -661,10 +793,10 @@
       isMac;
 
 
-    if(
+    if (
       !isAllowedDevice ||
       isAndroid
-    ){
+    ) {
 
       document
         .getElementById("device-warning")
@@ -675,22 +807,107 @@
 
 
     /* ========================================================
+       EDITION RELEASE PAGE ROUTING
+    ======================================================== */
+
+    async function loadEditionReleasePages() {
+
+      const editionLinks =
+        document.querySelectorAll(
+          ".edition-release-link"
+        );
+
+
+      try {
+
+        const response =
+          await fetch(
+            "/editions.json",
+            {
+              cache: "no-store"
+            }
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            "Could not load editions.json"
+          );
+
+        }
+
+
+        const editions =
+          await response.json();
+
+
+        editionLinks.forEach(
+          link => {
+
+            const editionName =
+              link.dataset.edition;
+
+
+            const edition =
+              editions.find(
+                item =>
+                  item.edition === editionName
+              );
+
+
+            if (
+              edition &&
+              typeof edition.releasePage === "string" &&
+              edition.releasePage.trim() !== ""
+            ) {
+
+              link.href =
+                edition.releasePage.trim();
+
+            }
+
+          }
+        );
+
+      }
+
+      catch (error) {
+
+        /*
+          Cards already point to Find Edition.
+
+          If editions.json cannot be loaded,
+          the user still has a working destination.
+        */
+
+        console.warn(
+          "Skylark release-page routing unavailable.",
+          error
+        );
+
+      }
+
+    }
+
+
+    loadEditionReleasePages();
+
+
+
+    /* ========================================================
        SKYLARK PAGE SEARCH
 
-       This is intentionally a direct GitHub Pages navigator.
-
-       Examples:
+       Direct GitHub Pages navigator.
 
        Support
-       -> https://skylark-inc.github.io/Support/
+       -> /Support/
 
-       Skylark-Edition26
-       -> https://skylark-inc.github.io/Skylark-Edition26/
+       Support/Obsolete
+       -> /Support/Obsolete/
 
-       SomethingThatDoesNotExist
-       -> GitHub Pages 404
-
-       The search does NOT need a database of pages.
+       Invalid path
+       -> Skylark 404
     ======================================================== */
 
     const siteSearchForm =
@@ -716,7 +933,7 @@
           siteSearch.value.trim();
 
 
-        if(!value){
+        if (!value) {
 
           siteSearch.focus();
 
@@ -725,25 +942,12 @@
         }
 
 
-        /*
-          If someone pastes a Skylark URL,
-          strip the domain first.
-        */
-
         value =
           value.replace(
             /^https?:\/\/skylark-inc\.github\.io\//i,
             ""
           );
 
-
-        /*
-          Remove leading and trailing slashes.
-
-          Internal slashes remain, allowing searches such as:
-
-          Support/Obsolete
-        */
 
         value =
           value.replace(
@@ -752,12 +956,7 @@
           );
 
 
-        /*
-          If only the root URL was entered,
-          return to the homepage.
-        */
-
-        if(!value){
+        if (!value) {
 
           window.location.href =
             "https://skylark-inc.github.io/";
@@ -766,13 +965,6 @@
 
         }
 
-
-        /*
-          Navigate directly to that path.
-
-          If it doesn't exist, GitHub Pages handles
-          the 404 page naturally.
-        */
 
         window.location.href =
           "https://skylark-inc.github.io/" +
