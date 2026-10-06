@@ -38,12 +38,12 @@
     {
       "id": "nxt",
       "product": "nXt",
-      "type": "non-server",
+      "type": "",
       "minimumOS": "26.0",
       "maximumOS": null,
       "releasePage": "https://skylark-inc.github.io/nXt",
-      "downloadURL": null,
-      "available": false,
+      "downloadURL": "https://www.icloud.com/shortcuts/01e288bda8f345b0ba93f1001a6da204,
+      "available": true,
       "eol": false
     }
   ]
