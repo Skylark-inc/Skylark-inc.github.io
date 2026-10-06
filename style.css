@@ -84,8 +84,6 @@
 
 /* ==========================================================
    DARK MODE
-
-   Automatically follows the device/browser appearance.
 ========================================================== */
 
 @media (prefers-color-scheme: dark) {
@@ -1034,9 +1032,6 @@ button {
 
 .new-release {
 
-  max-width:
-    445px;
-
   background:
     linear-gradient(
       145deg,
@@ -1461,14 +1456,6 @@ and (
 
     min-height:
       92px;
-
-  }
-
-
-  .new-release {
-
-    max-width:
-      none;
 
   }
 
