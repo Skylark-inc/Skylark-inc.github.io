@@ -74,15 +74,15 @@
   },
   {
     "edition": "Edition 27",
-    "version": "v1.0",
+    "version": "v1.1",
     "min": "27.0",
     "max": "27.2",
     "beta": false,
-    "alert": false,
-    "alertMessage": ".",
+    "alert": true,
+    "alertMessage": "iPadOs is coming soon!",
     "eol": false,
     "releasePage": "https://skylark-inc.github.io/Skylark-Edition27",
-    "link": "https://www.icloud.com/shortcuts/9d75b0011b2a41edac49c815ca53592c",
+    "link": "https://www.icloud.com/shortcuts/aa322f695354490ba426ca424d3f2328",
     "iPadOSLink": ""
   }
 ]
