@@ -61,7 +61,7 @@
   },
   {
     "edition": "Edition 26",
-    "version": "v1.6.1",
+    "version": "v1.6.2",
     "min": "26.0",
     "max": "26.6.2",
     "beta": false,
